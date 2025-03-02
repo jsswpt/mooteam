@@ -13,6 +13,7 @@
   --MAIN: #fafafa;
   --PRIMARY: #215cff;
   --ON-PRIMARY: #fafafa;
+  --WARNING: #ff7621;
   --CONTRAST: #232323;
   --INACTIVE: color-mix(in srgb, var(--CONTRAST), var(--MAIN) 80%);
   --STROKE: color-mix(in srgb, var(--CONTRAST), var(--MAIN) 40%);
@@ -21,6 +22,8 @@
   --RADIUS-MD: 0.5rem;
 }
 
+.body1,
+.body2,
 .subtitle1,
 .button1 {
   line-height: 125%;
@@ -29,6 +32,18 @@
 .subtitle1 {
   font-size: 1rem;
   font-weight: 600;
+}
+
+.body {
+  &1 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &2 {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
 }
 
 .button1 {
