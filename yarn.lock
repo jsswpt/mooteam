@@ -1123,6 +1123,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-interactions@npm:^8.6.3":
+  version: 8.6.3
+  resolution: "@storybook/addon-interactions@npm:8.6.3"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+    "@storybook/instrumenter": "npm:8.6.3"
+    "@storybook/test": "npm:8.6.3"
+    polished: "npm:^4.2.2"
+    ts-dedent: "npm:^2.2.0"
+  peerDependencies:
+    storybook: ^8.6.3
+  checksum: 10c0/59c903937eb73c6c11b8f76248e57b87aa89bc4d07b38930ec4db63e42706777401e313ca67399ffdfe0811089ee64d56476adffa91cc131b29f6cbaf7f10706
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-measure@npm:8.6.3":
   version: 8.6.3
   resolution: "@storybook/addon-measure@npm:8.6.3"
@@ -1132,15 +1147,6 @@ __metadata:
   peerDependencies:
     storybook: ^8.6.3
   checksum: 10c0/5b2611de5918642332ab95b93334122d4b5d36a122040e737a0b48280cb52d88e223f35d81a0f271f0fb84413edb2226d060d99a5da97fe6caddc4a631c182d3
-  languageName: node
-  linkType: hard
-
-"@storybook/addon-onboarding@npm:^8.6.3":
-  version: 8.6.3
-  resolution: "@storybook/addon-onboarding@npm:8.6.3"
-  peerDependencies:
-    storybook: ^8.6.3
-  checksum: 10c0/3952335b79d17e65c9dcad040d7c518e78b6b7a1dc7a4641ef122ad4b701c110e7976bcd81e0d922a10332da8b001c959c6bb5543f44c8767e4befb5046cc513
   languageName: node
   linkType: hard
 
@@ -4971,7 +4977,7 @@ __metadata:
     "@chromatic-com/storybook": "npm:^3.2.5"
     "@eslint/js": "npm:^9.21.0"
     "@storybook/addon-essentials": "npm:^8.6.3"
-    "@storybook/addon-onboarding": "npm:^8.6.3"
+    "@storybook/addon-interactions": "npm:^8.6.3"
     "@storybook/blocks": "npm:^8.6.3"
     "@storybook/experimental-addon-test": "npm:^8.6.3"
     "@storybook/react": "npm:^8.6.3"
