@@ -1,0 +1,116 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  outline: transparent solid 0;
+  outline-offset: 0;
+  border-width: 0.0625rem;
+  border-style: solid;
+  border-color: transparent;
+  transition: 0.12s ease-in;
+
+  &:active {
+    transition:
+      0.08s linear,
+      outline-width 0.04s,
+      outline-color 0.32s;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.color {
+  &_primary {
+    &.variant {
+      &_outlined {
+        --MAIN-COLOR: var(--PRIMARY);
+        --TEXT-COLOR: var(--PRIMARY);
+      }
+
+      &_contained {
+        --MAIN-COLOR: var(--PRIMARY);
+        --TEXT-COLOR: var(--ON-PRIMARY);
+      }
+    }
+  }
+
+  &_inherit {
+    &.variant {
+      &_outlined {
+        --MAIN-COLOR: var(--STROKE);
+        --TEXT-COLOR: var(--CONTRAST);
+      }
+
+      &_contained {
+        --MAIN-COLOR: var(--CONTRAST);
+        --TEXT-COLOR: var(--MAIN);
+      }
+    }
+  }
+}
+
+.variant {
+  &_contained {
+    &:not(:disabled) {
+      background: var(--MAIN-COLOR);
+      color: var(--TEXT-COLOR);
+
+      &:hover {
+        background: color-mix(in srgb, var(--MAIN-COLOR), var(--MAIN) 20%);
+      }
+
+      &:active {
+        background: color-mix(in srgb, var(--MAIN-COLOR), var(--MAIN) 5%);
+      }
+    }
+  }
+
+  &_outlined {
+    &:not(:disabled) {
+      border-color: var(--MAIN-COLOR);
+      color: var(--TEXT-COLOR);
+
+      &:hover {
+        border-color: color-mix(in srgb, var(--MAIN-COLOR), var(--MAIN) 40%);
+        color: color-mix(in srgb, var(--TEXT-COLOR), var(--MAIN) 40%);
+      }
+
+      &:active {
+        border-color: color-mix(in srgb, var(--MAIN-COLOR), var(--MAIN) 20%);
+        color: color-mix(in srgb, var(--TEXT-COLOR), var(--MAIN) 20%);
+      }
+    }
+  }
+
+  &_contained,
+  &_outlined {
+    /* stylelint-disable-next-line */
+    &:disabled {
+      background: var(--INACTIVE);
+      color: var(--STROKE);
+    }
+
+    &:not(:disabled) {
+      &:active,
+      &:focus-visible {
+        outline-width: 0.25rem;
+        outline-color: color-mix(in srgb, var(--MAIN-COLOR), var(--MAIN) 88%);
+      }
+    }
+  }
+}
+
+.size {
+  &_md {
+    padding: 0 var(--P-MD);
+    height: var(--SIZE-MD);
+    border-radius: var(--RADIUS-MD);
+  }
+}
+
+.full-width {
+  width: 100%;
+}

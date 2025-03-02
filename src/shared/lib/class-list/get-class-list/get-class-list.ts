@@ -9,7 +9,7 @@ export const getClassList = <
   P extends string = '',
   S extends string = '',
 >(
-  variants: Array<V>,
+  variants: Readonly<Array<V>>,
   prefix?: P,
   separator?: S
 ): Result<V, P, S> =>
