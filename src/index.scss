@@ -1,8 +1,11 @@
+// Чтобы не запариваться над локальной установкой
+@import 'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Nunito, sans-serif;
   list-style: none;
 }
 
@@ -16,6 +19,16 @@
   --SIZE-MD: 2.5rem;
   --P-MD: 1rem;
   --RADIUS-MD: 0.5rem;
+}
+
+.subtitle1,
+.button1 {
+  line-height: 125%;
+}
+
+.subtitle1 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .button1 {
