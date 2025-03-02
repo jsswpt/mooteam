@@ -1,0 +1,16 @@
+.hint {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.type {
+  &_default {
+    color: var(--STROKE);
+  }
+
+  &_warning {
+    color: var(--WARNING);
+  }
+}
