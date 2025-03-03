@@ -23,7 +23,7 @@ export const Component = () => (
           </Link>
         </li>
         <li>
-          <Link to="/sign-in">
+          <Link to="/authorization/sign-in">
             <Button variant="outlined" color="inherit">
               Sign in
             </Button>

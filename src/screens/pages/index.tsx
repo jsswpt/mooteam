@@ -2,6 +2,8 @@ import { Outlet, RouteObject, useRoutes } from 'react-router-dom'
 
 import { useLocation } from '@/shared/lib/router'
 
+import { SignInPage } from './sign-in'
+import { AuthGuard } from '@/entities'
 import { RootLayout } from '@/layouts'
 import { AboutUsPage } from '@/screens/pages/about-us'
 
@@ -17,6 +19,22 @@ const routesConfig: RouteObject[] = [
       {
         index: true,
         element: <AboutUsPage />,
+      },
+    ],
+  },
+  {
+    path: '/authorization',
+    element: (
+      <AuthGuard reverse>
+        <RootLayout>
+          <Outlet />
+        </RootLayout>
+      </AuthGuard>
+    ),
+    children: [
+      {
+        path: 'sign-in',
+        element: <SignInPage />,
       },
     ],
   },
