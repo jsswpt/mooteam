@@ -1,0 +1,29 @@
+.avatar {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.placeholder {
+  color: var(--CONTRAST);
+}
+
+.size {
+  &_lg {
+    width: var(--SIZE-LG);
+    height: var(--SIZE-LG);
+
+    .placeholder {
+      font-size: 1rem;
+    }
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
