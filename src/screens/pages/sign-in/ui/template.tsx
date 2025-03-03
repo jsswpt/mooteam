@@ -1,8 +1,13 @@
+import styles from './styles.module.scss'
+
 type TemplateProps = {
-  // TODO: удалить
-  isFallback?: boolean
+  signInForm: React.ReactNode
 }
 
-export const Template = ({ isFallback }: TemplateProps) => (
-  <>'' template {isFallback ? 'fallback' : 'component'}</>
+export const Template = ({ signInForm }: TemplateProps) => (
+  <section className="section">
+    <div className="container">
+      <div className={styles['sign-in-form-wrapper']}>{signInForm}</div>
+    </div>
+  </section>
 )

@@ -4,13 +4,14 @@ export type AuthorizeByTokenResponse = {
   success: boolean
   token: string
   data: {
-    fullname: 'Aleksei K'
-    email: 'aleksei@example.com'
+    fullname: string
+    email: string
+    password: string
   }
 }
 
 export type AuthorizeByTokenReq = {
-  (): Promise<AuthorizeByTokenResponse>
+  (): Promise<AuthorizeByTokenResponse | null>
 }
 
 export const authorizeByTokenReq: AuthorizeByTokenReq = async () => {
@@ -26,6 +27,9 @@ export const authorizeByTokenReq: AuthorizeByTokenReq = async () => {
 
   return new Promise((res) => {
     setTimeout(() => {
+      if (token !== data.token) {
+        res(null)
+      }
       res(data)
     }, 2000)
   })
