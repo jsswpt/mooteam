@@ -1,0 +1,31 @@
+.wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--CONTRAST), transparent 40%);
+
+  /* stylelint-disable-next-line */
+  backdrop-filter: blur(2px);
+  transition:
+    visibility 0s,
+    opacity 0.16s ease-in;
+
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.close {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0s 0.16s,
+      opacity 0.16s ease-in;
+  }
+}
