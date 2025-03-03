@@ -7,10 +7,12 @@
   box-sizing: border-box;
   font-family: Nunito, sans-serif;
   list-style: none;
+  text-decoration: none;
 }
 
 :root {
   --MAIN: #fafafa;
+  --SURFACE: #fff;
   --PRIMARY: #215cff;
   --ON-PRIMARY: #fafafa;
   --WARNING: #ff7621;
@@ -21,6 +23,18 @@
   --SIZE-LG: 5rem;
   --P-MD: 1rem;
   --RADIUS-MD: 0.5rem;
+  --HEADER-H: 5rem;
+}
+
+body {
+  background: var(--MAIN);
+}
+
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
 }
 
 .body1,

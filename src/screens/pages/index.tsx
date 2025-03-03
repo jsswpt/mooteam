@@ -1,11 +1,23 @@
-import { RouteObject, useRoutes } from 'react-router-dom'
+import { Outlet, RouteObject, useRoutes } from 'react-router-dom'
 
 import { useLocation } from '@/shared/lib/router'
+
+import { RootLayout } from '@/layouts'
 
 const routesConfig: RouteObject[] = [
   {
     path: '/',
-    element: <>App</>,
+    element: (
+      <RootLayout>
+        <Outlet />
+      </RootLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <>App</>,
+      },
+    ],
   },
 ]
 
