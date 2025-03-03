@@ -1,7 +1,6 @@
 .form-wrapper,
 .form-blocks-list,
 .form-block,
-.form-row,
 .form-col {
   display: flex;
 }
@@ -25,11 +24,8 @@
 }
 
 .form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   align-items: center;
-  gap: 0.25rem;
-}
-
-.form-col {
-  flex: 1;
-  overflow: hidden;
+  gap: 0.5rem;
 }

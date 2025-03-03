@@ -46,6 +46,7 @@
     &:invalid,
     &.error {
       outline-color: color-mix(in srgb, var(--WARNING), var(--MAIN) 88%);
+      border-color: var(--WARNING);
     }
   }
 }
