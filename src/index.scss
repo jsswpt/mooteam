@@ -1,7 +1,95 @@
+// Чтобы не запариваться над локальной установкой
+@import 'https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Nunito, sans-serif;
   list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+:root {
+  --MAIN: #fafafa;
+  --SURFACE: #fff;
+  --PRIMARY: #215cff;
+  --ON-PRIMARY: #fafafa;
+  --WARNING: #ff7621;
+  --CONTRAST: #232323;
+  --INACTIVE: color-mix(in srgb, var(--CONTRAST), var(--MAIN) 80%);
+  --STROKE: color-mix(in srgb, var(--CONTRAST), var(--MAIN) 40%);
+  --SIZE-MD: 2.5rem;
+  --SIZE-LG: 5rem;
+  --P-MD: 1rem;
+  --RADIUS-MD: 0.5rem;
+  --HEADER-H: 5rem;
+}
+
+body {
+  background: var(--MAIN);
+}
+
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  width: 100%;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.h1,
+.h2,
+.body1,
+.body2,
+.subtitle1,
+.subtitle2,
+.button1 {
+  line-height: 125%;
+}
+
+.h {
+  &1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.subtitle {
+  &1 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &2 {
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+}
+
+.body {
+  &1 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  &2 {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+}
+
+.button1 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }

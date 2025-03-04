@@ -1,0 +1,35 @@
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30rem;
+  width: 100%;
+}
+
+.card {
+  padding: 1rem 2rem;
+  background: var(--SURFACE);
+  border-radius: var(--RADIUS-MD);
+  box-shadow: 0 0 2rem 0.5rem
+    color-mix(in srgb, var(--CONTRAST), transparent 80%);
+}
+
+.title-wrapper {
+  margin-bottom: 1rem;
+}
+
+.steps-wrapper {
+  margin-bottom: 2rem;
+}
+
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--CONTRAST);
+}
+
+.step-inactive {
+  color: var(--INACTIVE);
+}

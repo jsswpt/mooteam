@@ -1,0 +1,25 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.label-title {
+  display: block;
+  color: var(--CONTRAST);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.disabled {
+  &,
+  & > * {
+    cursor: not-allowed;
+  }
+
+  .label-title {
+    color: var(--INACTIVE);
+  }
+}
