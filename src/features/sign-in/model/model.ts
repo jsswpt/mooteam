@@ -2,9 +2,9 @@ import { createEffect, createEvent, createStore, sample } from 'effector'
 
 import { useFormik } from '@/shared/lib/formik'
 
-import { signInByCredentialsReq } from '../'
 import { validationSchema } from './validators'
 import { $user, User } from '@/entities'
+import { signInByCredentialsReq } from '@/features'
 
 export type FormData = { email: string; password: string }
 

@@ -2,8 +2,7 @@ import { useUnit } from 'effector-react'
 
 import { Button, Form, Hint, Label, TextField } from '@/shared/ui'
 
-import { $error, useModel } from '../'
-import { signInFx } from '../'
+import { $error, signInFx, useModel } from '@/features'
 
 export const Component = () => {
   const { dirty, errors, formProps, isValid, values } = useModel()

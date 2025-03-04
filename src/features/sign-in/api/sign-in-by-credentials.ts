@@ -1,4 +1,5 @@
 import { ApiInstance } from '@/shared/api'
+import { setCookie } from '@/shared/utils'
 
 import { AuthorizeByTokenResponse } from '@/entities'
 
@@ -22,7 +23,8 @@ export const signInByCredentialsReq: SignInByCredentialsReq = async ({
   } = await ApiInstance.get<SignInByCredentialsResponse>('/profile')
 
   if (data.email === email && data.password === password) {
-    document.cookie = `auth_token=${token}`
+    setCookie('auth_token', token)
+
     return { data, success, token }
   } else {
     throw new Error('Invalid email or password')

@@ -5,7 +5,7 @@ import {
   $isAuthorized,
   $isAuthorizeRequested,
   authorizeOnLoadFx,
-} from '@/entities/session/model'
+} from '@/entities'
 
 export type AuthGuardProps = {
   reverse?: boolean

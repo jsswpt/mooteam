@@ -1,4 +1,4 @@
-import { AboutUsSection } from './sections'
+import { AboutUsSection } from './components'
 import { Template } from './template'
 
 export const Fallback = () => (

@@ -3,9 +3,7 @@ type TemplateProps = {
 }
 
 export const Template = ({ aboutUs }: TemplateProps) => (
-  <>
-    <section id="about-us" className="section">
-      <div className="container">{aboutUs}</div>
-    </section>
-  </>
+  <section id="about-us" className="section">
+    <div className="container">{aboutUs}</div>
+  </section>
 )

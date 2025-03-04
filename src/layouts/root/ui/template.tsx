@@ -8,6 +8,6 @@ type TemplateProps = {
 export const Template = ({ children, header }: TemplateProps) => (
   <div className={styles.wrapper}>
     {header}
-    <main>{children}</main>
+    <main className={styles.main}>{children}</main>
   </div>
 )

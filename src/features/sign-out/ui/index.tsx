@@ -1,6 +1,6 @@
 import { Button } from '@/shared/ui'
 
-import { handleSignOut } from '../'
+import { handleSignOut } from '@/features'
 
 export const SignOut = () => (
   <Button variant="outlined" color="inherit" onClick={() => handleSignOut()}>
