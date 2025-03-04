@@ -1,0 +1,45 @@
+.user-data {
+  display: flex;
+  gap: 2rem;
+}
+
+.user-info-wrapper {
+  flex: 1;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.title {
+  color: var(--CONTRAST);
+}
+
+.button-wrapper {
+  width: fit-content;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 20rem;
+  width: fit-content;
+}
+
+.quote-text {
+  color: var(--CONTRAST);
+}
+
+.quote-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quote-author {
+  color: var(--INACTIVE);
+}

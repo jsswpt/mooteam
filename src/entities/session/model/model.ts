@@ -27,7 +27,7 @@ sample({
 sample({
   clock: authorizeOnLoadFx.doneData,
   fn: (clk) =>
-    clk ? { email: clk.data.email, fullname: clk.data.email } : null,
+    clk ? { email: clk.data.email, fullname: clk.data.fullname } : null,
   target: $user,
 })
 

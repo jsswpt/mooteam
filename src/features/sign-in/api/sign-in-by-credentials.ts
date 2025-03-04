@@ -21,14 +21,10 @@ export const signInByCredentialsReq: SignInByCredentialsReq = async ({
     data: { data, success, token },
   } = await ApiInstance.get<SignInByCredentialsResponse>('/profile')
 
-  return new Promise((res, rej) => {
-    setTimeout(() => {
-      if (data.email === email && data.password === password) {
-        document.cookie = `auth_token=${token}`
-        res({ data, success, token })
-      } else {
-        rej(new Error('Invalid email or password'))
-      }
-    }, 3000)
-  })
+  if (data.email === email && data.password === password) {
+    document.cookie = `auth_token=${token}`
+    return { data, success, token }
+  } else {
+    throw new Error('Invalid email or password')
+  }
 }

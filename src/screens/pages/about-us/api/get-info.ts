@@ -14,9 +14,5 @@ export type GetInfoReq = {
 export const getInfoReq: GetInfoReq = async () => {
   const { data: result } = await ApiInstance.get<GetInfoReqResult>('/info')
 
-  return new Promise((res) => {
-    setTimeout(() => {
-      res(result)
-    }, 2000)
-  })
+  return result
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "vite --port 3000",
     "watch:storybook": "storybook dev -p 3001",
-    "watch:db": "yarn json-server db.json --port 8080",
+    "watch:db": "yarn json-server db.json --port 8080 --delay 2000",
     "watch:nodemon": "nodemon --quiet --watch . -e js,cjs,md,yml,ts,tsx,json,scss --exec",
     "watch:eslint": "yarn watch:nodemon 'yarn fix:eslint'",
     "watch:stylelint": "yarn watch:nodemon 'yarn fix:stylelint'",
@@ -59,7 +59,7 @@
     "eslint-plugin-storybook": "^0.11.3",
     "globals": "^15.15.0",
     "husky": "^9.1.7",
-    "json-server": "^1.0.0-beta.3",
+    "json-server": "0.17.3",
     "nodemon": "^3.1.9",
     "playwright": "^1.50.1",
     "postcss": "^8.5.3",
