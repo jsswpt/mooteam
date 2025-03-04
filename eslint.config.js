@@ -33,6 +33,7 @@ export default tseslint.config(
         'warn',
         {
           groups: [
+            // Почему-то группировка не работает. Видимо, ошибся в регулярках
             { type: 'side-effect', order: 10 },
             { type: 'dependency', order: 20 },
             { regex: `^(.*)\/app'$`, order: 30 },

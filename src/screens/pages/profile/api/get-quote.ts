@@ -1,4 +1,5 @@
 import { ApiInstance } from '@/shared/api'
+import { getCookie } from '@/shared/utils'
 
 type GetQuoteData = {
   authorId: number
@@ -21,7 +22,11 @@ type GetQuoteReq = {
 }
 
 export const getQuoteReq: GetQuoteReq = async ({ authorId }, signal) => {
-  console.log('Getting quote by authorId. Current authorId is', authorId)
+  const token = getCookie('auth_token')
+
+  console.log(
+    `Getting quote by token and authorId. Current token is ${token}, authorId is ${authorId}`
+  )
 
   const { data: quoteData } = await ApiInstance.get<GetQuoteResponse>(
     '/quote',

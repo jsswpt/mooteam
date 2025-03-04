@@ -1,7 +1,7 @@
 import { createEvent, createStore } from 'effector'
 import { useEffect, useRef, useState } from 'react'
 
-import { getAuthorReq, getQuoteReq } from '../'
+import { getAuthorReq, getQuoteReq } from '@/screens'
 
 export const setQuote = createEvent<string>()
 

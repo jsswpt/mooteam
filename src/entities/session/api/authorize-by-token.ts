@@ -1,4 +1,5 @@
 import { ApiInstance } from '@/shared/api'
+import { getCookie } from '@/shared/utils'
 
 export type AuthorizeByTokenResponse = {
   success: boolean
@@ -15,11 +16,7 @@ export type AuthorizeByTokenReq = {
 }
 
 export const authorizeByTokenReq: AuthorizeByTokenReq = async () => {
-  const [, token] =
-    document.cookie
-      .split(';')
-      .map((item) => item.split('='))
-      .find((item) => item[0] === 'auth_token') ?? []
+  const token = getCookie('auth_token')
 
   const { data } = await ApiInstance.get<AuthorizeByTokenResponse>(
     `/profile?token=${token}`

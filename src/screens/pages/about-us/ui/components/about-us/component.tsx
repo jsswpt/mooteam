@@ -1,10 +1,10 @@
 import cn from 'clsx'
 import { useUnit } from 'effector-react'
 
-import { $pageInfo, getInfoFx } from '../../../'
 import { Fallback } from './fallback'
 import styles from './styles.module.scss'
 import { Template } from './template'
+import { $pageInfo, getInfoFx } from '@/screens'
 
 export const Component = () => {
   const [pageInfo, isLoading] = useUnit([$pageInfo, getInfoFx.pending])

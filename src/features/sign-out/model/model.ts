@@ -1,14 +1,16 @@
 import { createEffect, createEvent, sample } from 'effector'
 
-import { signOutReq } from '../'
 import { $user } from '@/entities'
+import { signOutReq } from '@/features'
 
 export const signOutFx = createEffect(signOutReq)
+
 const clearCurrentUserFx = createEffect(
   () => (document.cookie = 'auth_token=null')
 )
 
 export const handleSignOut = createEvent()
+
 const clearCurrentUser = createEvent()
 
 sample({

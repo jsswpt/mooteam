@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button, Modal } from '@/shared/ui'
 
 import styles from './styles.module.scss'
-import { useQuote } from '@/screens/pages/profile/model'
+import { useQuote } from '@/screens'
 
 export const GetQuote = () => {
   const [isOpen, setIsOpen] = useState(false)

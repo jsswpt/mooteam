@@ -1,7 +1,7 @@
 import { createEffect, createStore, sample } from 'effector'
 import { createGate } from 'effector-react'
 
-import { getInfoReq } from '../'
+import { getInfoReq } from '@/screens'
 
 export const getInfoFx = createEffect(getInfoReq)
 
@@ -18,7 +18,7 @@ export const $pageInfo = createStore<PageInfo | null>(null)
 sample({
   clock: gate.open,
   source: $isInfoRequested,
-  filter: (src) => !src,
+  filter: (isRequested) => !isRequested,
   target: getInfoFx,
 })
 
