@@ -24,18 +24,7 @@ export const Modal = ({ children, onClose, open }: ModalProps) => {
         })}
         onClick={onClose}
       >
-        <div
-          style={{
-            zIndex: 1001,
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-          }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          {children}
-        </div>
+        <div onClick={(e) => e.stopPropagation()}>{children}</div>
       </div>
     </div>,
     createWrapper(`modal-${id}`)

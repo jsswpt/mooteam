@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import { useLocation } from '@/shared/lib/router'
 import { Button } from '@/shared/ui'
 
+import { Fallback } from './fallback'
 import { Template } from './template'
-import { $isAuthorized } from '@/entities'
+import { $isAuthorized, authorizeOnLoadFx } from '@/entities'
 
 const ProfileItem = () => {
   const isAuthorized = useUnit($isAuthorized)
@@ -51,21 +52,29 @@ const SignOutItem = () => {
   return null
 }
 
-export const Component = () => (
-  <Template
-    navigationItems={
-      <>
-        <li>
-          <Link to="/">
-            <Button variant="outlined" color="inherit">
-              About us
-            </Button>
-          </Link>
-        </li>
-        <ProfileItem />
-        <SignInItem />
-        <SignOutItem />
-      </>
-    }
-  />
-)
+export const Component = () => {
+  const isLoading = useUnit(authorizeOnLoadFx.pending)
+
+  if (isLoading) {
+    return <Fallback />
+  }
+
+  return (
+    <Template
+      navigationItems={
+        <>
+          <li>
+            <Link to="/">
+              <Button variant="outlined" color="inherit">
+                About us
+              </Button>
+            </Link>
+          </li>
+          <ProfileItem />
+          <SignInItem />
+          <SignOutItem />
+        </>
+      }
+    />
+  )
+}

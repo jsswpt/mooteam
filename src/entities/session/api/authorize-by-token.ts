@@ -25,12 +25,8 @@ export const authorizeByTokenReq: AuthorizeByTokenReq = async () => {
     `/profile?token=${token}`
   )
 
-  return new Promise((res) => {
-    setTimeout(() => {
-      if (token !== data.token) {
-        res(null)
-      }
-      res(data)
-    }, 2000)
-  })
+  if (token !== data.token) {
+    return null
+  }
+  return data
 }
