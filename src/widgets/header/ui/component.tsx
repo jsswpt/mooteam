@@ -7,6 +7,7 @@ import { Button } from '@/shared/ui'
 import { Fallback } from './fallback'
 import { Template } from './template'
 import { $isAuthorized, authorizeOnLoadFx } from '@/entities'
+import { SignOut } from '@/features'
 
 const ProfileItem = () => {
   const isAuthorized = useUnit($isAuthorized)
@@ -42,9 +43,7 @@ const SignOutItem = () => {
   if (pagePath === '/profile') {
     return (
       <li>
-        <Button variant="outlined" color="inherit">
-          Sign out
-        </Button>
+        <SignOut />
       </li>
     )
   }

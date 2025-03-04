@@ -15,6 +15,8 @@ export type User = {
 
 export const $user = createStore<User | null>(null)
 
+$user.watch(console.log)
+
 export const $isAuthorized = $user.map(Boolean)
 
 sample({

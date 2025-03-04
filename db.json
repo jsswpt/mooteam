@@ -28,5 +28,9 @@
       "email": "aleksei@example.com",
       "password": "lkJlkn8hj"
     }
+  },
+  "logout": {
+    "success": true,
+    "data": {}
   }
 }
